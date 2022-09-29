@@ -68,7 +68,7 @@
 }
 
 .home__img {
-	background: url(../../assets/profile.jpg);
+	background: url(https://picsum.photos/200);
 	background-repeat:no-repeat;
 	background-position: center;
 	background-size: cover;
@@ -102,7 +102,95 @@
 	}
 }
 
-.home__scroll {
-	font-size: 2rem;
-	margin-left: 9.25rem;
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+
+	30% {
+		transform: translateY(3.75rem);
+	}
 }
+
+.home__scroll {
+	margin-left: 9rem;
+}
+
+.home__scroll-name {
+	color: var(--title-color);
+	font-size: 1rem;
+	font-weight: var(--font-medium);
+	margin-right: var(--mb-0-25);
+	margin-left: 2px;
+}
+
+.home__scroll-arrow {
+	font-size: 1rem;
+	color: var(--title-color);
+}
+
+/*==================BREAKPOINTS========================*/
+/* For large devices */
+@media screen and (max-width: 992px) {
+	.home__content {
+		grid-template-columns: 100px repeat(2, 1fr);
+		column-gap: 1.25rem;
+		flex-direction: row;
+	}
+
+	.home__hand {
+		width: 26px;
+		height: 26px;
+	}
+
+	.home__subtitle {
+		padding-left: 3.75rem;
+		margin-bottom: var(--mb-1);
+
+	}
+
+	.home__subtitle::before {
+		width: 42px;
+		top: 0.8rem
+	}
+
+  }
+
+  /* For medium devices */
+  @media screen and (max-width: 768px) {
+	.home__content {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		padding-top: 0;
+	}
+
+	.home__data {
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.home__title {
+		display:flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.home__description {
+		text-align: center;
+	}
+
+	.home__img {
+		width: 200px;
+		height: 300px;
+	}
+  }
+
+  @media screen and (max-width: 576px) {
+
+  }
+
+  /* For small devices */
+  @media screen and (max-width: 350px) {
+  }
